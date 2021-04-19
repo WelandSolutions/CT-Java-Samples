@@ -1,0 +1,6 @@
+logging:
+  level:
+    com.weland.compacttalk.example: INFO
+    org:
+      springframework:
+        ws: ERROR
