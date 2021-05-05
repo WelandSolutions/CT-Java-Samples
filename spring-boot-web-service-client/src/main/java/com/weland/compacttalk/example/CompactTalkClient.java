@@ -87,9 +87,10 @@ public class CompactTalkClient extends WebServiceGatewaySupport {
 		request.setInfo3(order.getInfo3());
 		request.setInfo4(order.getInfo4());
 		request.setInfo5(order.getInfo5());
+		request.setActivate(true);
 
 
-		log.info("Add order with trans ID " + order.getTransId());
+		log.info("Add order with trans ID " + order.getTransId().getValue());
 
 		AddToQueueResponse response = (AddToQueueResponse) getWebServiceTemplate()
 				.marshalSendAndReceive(compactTalkUri, request,
