@@ -63,7 +63,6 @@ public class WebServiceSampleApplication {
 	CommandLineRunner executeOrder(CompactTalkClient ctClient) {
 		return args -> {
 			ActivateEventsResponse activateEventsResponse = ctClient.activateEvents();
-			System.err.println("Activated events");
 			log.info("Activated events with token " + activateEventsResponse.getActivateEventsResult());
 
 			AddToQueueResponse addToQueueResponse = AddToQueue(ctClient);
